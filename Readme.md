@@ -1,6 +1,6 @@
 # Simple maintenance page
 
-Template: https://gist.github.com/pitch-gist/299970
+Template: https://gist.github.com/pitch-gist/2999707
 
 Use example:
 
