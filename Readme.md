@@ -9,16 +9,17 @@ Use example:
 services:
 	...
     nginx-maintenance:
-        build: nginx-maintenance
-        restart: always
-        environment:
-            # default value: "en"
-            # available values: "en", "ru"
-            LANG: "ru"
+        build:
+            context: ./
+            dockerfile: Dockerfile
+            args:
+                # default value: "ru"
+                # available values: "en", "ru"
+                LANG: "en"
 ```
 
 ```
-# nginx.conf
+# main nginx.conf
 upstream backend {
     server ...;
     server nginx-maintenance:80 backup;

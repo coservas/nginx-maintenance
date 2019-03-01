@@ -1,5 +1,5 @@
 FROM nginx:alpine
-ENV LANG "en"
+ARG LANG="ru"
 
 COPY default.conf                           /etc/nginx/conf.d/default.conf
 COPY templates/maintenance.${LANG}.html     /usr/share/nginx/html/maintenance.html
