@@ -11,6 +11,10 @@ services:
     nginx-maintenance:
         build: nginx-maintenance
         restart: always
+        environment:
+            # default value: "en"
+            # available values: "en", "ru"
+            LANG: "ru"
 ```
 
 ```

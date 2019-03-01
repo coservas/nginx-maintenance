@@ -1,10 +1,8 @@
-FROM nginx:latest
+FROM nginx:alpine
+ENV LANG "en"
 
-RUN apt-get update && apt-get install -y vim mc net-tools
-
-COPY default.conf       /etc/nginx/conf.d/default.conf
-COPY maintenance.html   /usr/share/nginx/html/maintenance.html
+COPY default.conf                           /etc/nginx/conf.d/default.conf
+COPY templates/maintenance.${LANG}.html     /usr/share/nginx/html/maintenance.html
 
 WORKDIR /etc/nginx
-
 EXPOSE 80
