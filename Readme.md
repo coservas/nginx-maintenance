@@ -15,6 +15,9 @@ services:
             # default value: "en"
             # available values: "en", "ru"
             LANG: "ru"
+        # this line should be if use environment LANG
+        # + you need "docker-compose down" before changes
+        command: /bin/sh -c "envsubst < /usr/share/nginx/template/default.conf > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
 ```
 
 ```
