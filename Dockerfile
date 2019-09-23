@@ -1,4 +1,4 @@
-FROM nginx:alpine
+FROM nginx:1.17.3-alpine
 ARG LANG="ru"
 
 COPY default.conf                           /etc/nginx/conf.d/default.conf
